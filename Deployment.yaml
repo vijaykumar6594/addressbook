@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project-docker-deployment
+  name: project-ramya
 spec:
   replicas: 1  # Number of desired replicas
   selector:
     matchLabels:
-      app: project-docker
+      app: ramya
   template:
     metadata:
       labels:
-        app: project-docker
+        app: ramya
     spec:
       containers:
-      - name: project-docker
-        image: vijay6594/ramya:1
+      - name: ramya
+        image: vijay6594/ramya:3
         ports:
         - containerPort: 8080  # Port exposed by your application
