@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project-ramya
+  name: project-tom
 spec:
   replicas: 1  # Number of desired replicas
   selector:
     matchLabels:
-      app: ramya
+      app: tom
   template:
     metadata:
       labels:
-        app: ramya
+        app: tom
     spec:
       containers:
-      - name: ramya
-        image: vijay6594/ramya:3
+      - name: tom
+        image: vijay6594/project-k8s
         ports:
         - containerPort: 8080  # Port exposed by your application
